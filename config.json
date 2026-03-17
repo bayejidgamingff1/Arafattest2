@@ -6,19 +6,22 @@
 		"i_user": "",
 		"proxy": null,
 		"userAgent": "Mozilla/5.0 (Linux; Android 12; M2102J20SG) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.0.0 Mobile Safari/537.36",
-		"intervalGetNewCookie": 1440,
+		"intervalGetNewCookie": 5850,
 		"notes": "time the system automatically retrieves new cookies from email/password, unit is minute, if you set null, the system will not automatically retrieve new cookies, it saves you from having to manually change your cookie every time it expires. recommended set to 1440 (1day) or 4320 (3day).TO BE ABLE TO USE THIS FEATURE YOU NEED TO ENTER THE ACCOUNT PASSWORD ABOVE"
 	},
 	"antiInbox": false,
 	"language": "en",
 	"notesLanguage": "change to your language with ISO 639-1 code, available languages: vi (Vietnamese), en (English)",
-	"nickNameBot": "Bot name",
-	"prefix": "/",
+	"nickNameBot": "Hinata 🌷",
+	"prefix": "!",
 	"adminOnly": {
 		"enable": false,
 		"ignoreCommand": []
 	},
-	"adminBot": [""],
+	"adminBot": [
+		"100043250142520","61559433278651","100088862354582"
+	],
+	"owner": ["100043250142520","61559433278651"],
 	"whiteListMode": {
 		"enable": false,
 		"whiteListIds": [],
@@ -26,29 +29,30 @@
 	},
 	"whiteListModeThread": {
 		"enable": false,
-		"whiteListThreadIds": ["9311462368887583","7898494176933427","29972797222365949","9870658263027223","6542391465853509","9577576372322277"],
+		"whiteListThreadIds": [],
 		"notes": "if you enable this feature, only the thread in the whiteListThreadIds list can use the bot",
 		"how_it_work": "if you enable both whiteListMode and whiteListModeThread, the system will check if the user is in whiteListIds, then check if the thread is in whiteListThreadIds, if one of the conditions is true, the user can use the bot"
 	},
 	"database": {
 		"type": "mongodb",
-		"uriMongodb": "mongodb+srv://arafatas9999:Arafat69@arafat.9sc1rkl.mongodb.net/?retryWrites=true&w=majority&appName=Arafat",
+		"uriMongodb": "mongodb+srv://Hinata:W2fNh.H9iWFU22F@cluster0.cyattib.mongodb.net/GoatBotV2?retryWrites=true&w=majority&appName=Cluster0",
 		"autoSyncWhenStart": false,
 		"autoRefreshThreadInfoFirstTime": true,
 		"notes": "(1) type selects 'json' or 'sqlite' or 'mongodb'. If you choose mongodb, enter uri connect mongodb in the uriMongodb section, instructions to get uri connect mongodb at: https://youtu.be/z1f9urHW5xY. I recommend using 'mongodb' or 'sqlite', json is not recommended because it is not stable. (2) when you set autoSyncWhenStart to true, the bot will automatically synchronize the data in the database when starting the bot, this will make the bot start slower. (3) when you set autoRefreshThreadInfoFirstTime to true, the bot will automatically refresh the thread information when get first message from the thread since starting the bot"
 	},
-	"timeZone": "Asia/Dhaka",
+	"api": "https://www.noobx-api.rf.gd/api",
+	"timeZone": "Asia/Ho_Chi_Minh",
 	"credentials": {
 		"gmailAccount": {
-			"email": "messengerbot61@gamil.com",
-			"clientId": "552344212361-ujv8mjve7ue0r20t5caem9a41o8il508.apps.googleusercontent.com",
-			"clientSecret": "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",
-			"refreshToken": "1//04KHgkn8_-_PfCgYIARAAGAQSNwF-L9Iro-cV9UkOYQjg6noVALzdmrnrL8rijCPS96WGrKoflqLkXr76iZiXezLunTbJAU1AxS4",
+			"email": "s.khasanmahamud324@gmail.com",
+			"clientId": "1038587958316-ugoqskt5s8itgca98ahjulp4691lhd9v.apps.googleusercontent.com",
+			"clientSecret": "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",
+			"refreshToken": "1//04ra2waD4ABt3CgYIARAAGAQSNgF-L9IrYkOHdKbzJwt5kMXGWgdKgc2aF3CxAdJ96G-113vAhZZR2L1fFuzCVslX_QvBGv2R0w",
 			"apiKey": ""
 		},
 		"gRecaptcha": {
-			"siteKey": "",
-			"secretKey": ""
+			"siteKey": "6LfR_eIqAAAAAJ7iv5GGCSTMTbhbzyUtpYQcwHXS",
+			"secretKey": "6LfR_eIqAAAAALlwNhRONS5BLwglWLVImOt-4LT-"
 		}
 	},
 	"dashBoard": {
@@ -62,7 +66,7 @@
 		"socket": {
 			"enable": true,
 			"channelName": "uptime",
-			"verifyToken": "arafat_2025"
+			"verifyToken": ""
 		}
 	},
 	"autoRestart": {
@@ -76,7 +80,7 @@
 		"notes": "the value of timeInterval is seconds, url is the url you want to send the request to (automatically detected for hosting glitch or replit)"
 	},
 	"autoLoadScripts": {
-		"enable": false,
+		"enable": true,
 		"ignoreCmds": "",
 		"ignoreEvents": "",
 		"notes": "this feature will automatically load the script when scripts have been changed, you can set ignoreCmds to ignore commands, ignoreEvents to ignore events, separate by comma or space, example: \"cmd1.js cmd2.js cmd3.js\" (without backslash)"
@@ -86,7 +90,7 @@
 	"autoRestartWhenListenMqttError": false,
 	"restartListenMqtt": {
 		"enable": true,
-		"timeRestart": 3600000,
+		"timeRestart": 300000,
 		"delayAfterStopListening": 2000,
 		"logNoti": true,
 		"notes": "the value of timeRestart and delayAfterStopListening is milisecond, You shouldn't edit this if you don't know what it is"
@@ -130,6 +134,8 @@
 		"typ": false,
 		"presence": false
 	},
+	
+	
 	"optionsFca": {
 		"forceLogin": true,
 		"listenEvents": true,
