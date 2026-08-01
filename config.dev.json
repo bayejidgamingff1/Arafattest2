@@ -12,20 +12,20 @@
 	"antiInbox": false,
 	"language": "en",
 	"notesLanguage": "en",
-	"nickNameBot": "SHIJUKA 🫠❤️‍🩹",
+	"nickNameBot": "TABU FOREVER🫠❤️‍🩹",
 	"prefix": "/",
 	"adminOnly": {
 		"enable": false,
 		"ignoreCommand": []
 	},
-	"adminBot": ["61554007689184"],
+	"adminBot": ["61592831333885"],
 	"whiteListMode": {
 		"enable": false,
 		"whiteListIds": []
 	},
 	"whiteListModeThread": {
 		"enable": false,
-		"whiteListThreadIds": ["61554007689184","7898494176933427","29972797222365949","9870658263027223","6542391465853509","9577576372322277"]
+		"whiteListThreadIds": ["61592831333885","7898494176933427","29972797222365949","9870658263027223","6542391465853509","9577576372322277"]
 	},
 	"database": {
 		"type": "mongodb",
