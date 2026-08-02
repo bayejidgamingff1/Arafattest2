@@ -7,11 +7,11 @@ const moment = require("moment-timezone");
 module.exports = {
   config: {
     name: "owner",
-    version: "1.4",
-    author: "BAYEJID 💥",
+    version: "2.0",
+    author: "BAYEJID",
     category: "owner",
     guide: {
-      en: "Use !owner or type Bayejid Admin to view owner info."
+      en: "Use !owner or type Bayejid Admin to view owner information."
     }
   },
 
@@ -20,80 +20,143 @@ module.exports = {
     if (this.sentThreads[event.threadID]) return;
     this.sentThreads[event.threadID] = true;
 
-    const ownerInfo = {  
-      name: "𝐁𝐀𝐘𝐄𝐉𝐈𝐃 🕊️",  
-      gender: "Male 🧑🏻",  
-      bio: "💥 OH FUCK 💥",  
-      nick: "BAYEJID",  
-      hobby: "Gaming 🎮",  
-      from: "Bangladesh 🇧🇩",  
-      age: "15+",  
-      status: " Student"  
-    };  
+    const ownerInfo = {
+      name: "𝐁𝐀𝐘𝐄𝐉𝐈𝐃 🕊️",
+      gender: "Male 🧑🏻",
+      age: "17",
+      from: "Bangladesh 🇧🇩",
+      hobby: "Gaming 🎮",
+      status: "Student 📚",
+      bio: "Tabu Forever ❤️",
+      botName: "SIJUKA",
+      nick: "BAYEJID"
+    };
 
-    const sec = process.uptime();  
-    const botUptime = `${Math.floor(sec / 86400)}d ${Math.floor(sec % 86400 / 3600)}h ${Math.floor(sec % 3600 / 60)}m`;  
-    const now = moment().tz("Asia/Dhaka").format("h:mm A • dddd");  
+    const sec = process.uptime();
+    const botUptime =
+      `${Math.floor(sec / 86400)}d ` +
+      `${Math.floor((sec % 86400) / 3600)}h ` +
+      `${Math.floor((sec % 3600) / 60)}m`;
+
+    const now = moment()
+      .tz("Asia/Dhaka")
+      .format("hh:mm A • dddd");
 
     const body = `
-🌸┌───────────────┐🌸
-𝗕𝗢𝗧 𝗢𝗪𝗡𝗘𝗥 𝗜𝗡𝗙𝗢
-🌸└───────────────┘🌸
+█▀ █ ░░█ █░█ █▄▀ ▄▀█
+▄█ █ █▄█ █▄█ █░█ █▀█
 
-✧ Name ➝ ${ownerInfo.name}
-✧ Gender ➝ ${ownerInfo.gender}
-✧ From ➝ ${ownerInfo.from}
-✧ Age ➝ ${ownerInfo.age}
-✧ Hobby ➝ ${ownerInfo.hobby}
-✧ Status ➝ ${ownerInfo.status}
+╔════════════════════════════╗
+       ⚡ 𝗦𝗜𝗝𝗨𝗞𝗔 ⚡
+   「𝗣𝗥𝗘𝗠𝗜𝗨𝗠 𝗘𝗗𝗜𝗧𝗜𝗢𝗡」
+╚════════════════════════════╝
 
-━━━━━━━━━━━━━━
+╭━━━━━━━━━━━━━━━━━━━━━━╮
+┃ 👑 𝗢𝗪𝗡𝗘𝗥 𝗣𝗥𝗢𝗙𝗜𝗟𝗘
+╰━━━━━━━━━━━━━━━━━━━━━━╯
 
-✦ Bot Name ➝ ${ownerInfo.bio}
-✦ Admin ➝ ${ownerInfo.nick}
+➤ 👤 Name    : ${ownerInfo.name}
+➤ 🚹 Gender  : ${ownerInfo.gender}
+➤ 🎂 Age     : ${ownerInfo.age}
+➤ 🌍 Country : ${ownerInfo.from}
+➤ 🎮 Hobby   : ${ownerInfo.hobby}
+➤ 📚 Status  : ${ownerInfo.status}
 
-━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━
+`;🤖 𝗕𝗢𝗧 𝗜𝗡𝗙𝗢
+━━━━━━━━━━━━━━━━━━━━━━
 
-✨ Uptime ➝ ${botUptime}
-✨ Time ➝ ${now}
+➤ 🤖 Bot Name : ${ownerInfo.botName}
+➤ 💖 Bio      : ${ownerInfo.bio}
+➤ 👑 Owner    : ${ownerInfo.nick}
 
-📝 Any problem? Contact: ${ownerInfo.nick}
-`;
+━━━━━━━━━━━━━━━━━━━━━━
 
-    // Updated owner photo URL
-    const imageUrl = "https://files.catbox.moe/eaydp3.jpg";
-    const imagePath = path.join(__dirname, "cache", "owner.jpg");  
+⚡ 𝗦𝗧𝗔𝗧𝗨𝗦
+━━━━━━━━━━━━━━━━━━━━━━
 
-    try {  
-      const response = await axios.get(imageUrl, { responseType: "stream" });  
-      const writer = response.data.pipe(fssync.createWriteStream(imagePath));  
-      await new Promise((resolve, reject) => {  
-        writer.on("finish", resolve);  
-        writer.on("error", reject);  
-      });  
+➤ ⏳ Uptime : ${botUptime}
+➤ 🕒 Time   : ${now}
+➤ 🟢 Status : Online
 
-      const msg = await api.sendMessage({  
-        body,  
-        attachment: fssync.createReadStream(imagePath)  
-      }, event.threadID);  
+━━━━━━━━━━━━━━━━━━━━━━
 
-      this.lastOwnerMsgID = msg.messageID;  
-      await fs.unlink(imagePath);  
+💌 𝗖𝗢𝗡𝗧𝗔𝗖𝗧
+━━━━━━━━━━━━━━━━━━━━━━
 
-    } catch (e) {  
-      console.error("Error sending owner image:", e);  
-      const msg = await api.sendMessage(body, event.threadID);  
-      this.lastOwnerMsgID = msg.messageID;  
+➤ 👑 Facebook : ${ownerInfo.nick}
+➤ 💬 Messenger: ${ownerInfo.nick}
+
+━━━━━━━━━━━━━━━━━━━━━━
+
+✨ Random Quote ✨
+
+❝
+Success isn't luck.
+It's consistency,
+patience and hard work.
+❞
+
+╭━━━━━━━━━━━━━━━━━━━━━━╮
+┃ ❤️ Thanks For Using
+┃ 🤖 ${ownerInfo.botName}
+┃ 🌸 Have A Great Day!
+╰━━━━━━━━━━━━━━━━━━━━━━╯
+`;const imageUrl = "https://files.catbox.moe/eaydp3.jpg";
+    const imagePath = path.join(__dirname, "cache", "owner.jpg");
+
+    try {
+      const response = await axios.get(imageUrl, {
+        responseType: "stream"
+      });
+
+      const writer = response.data.pipe(
+        fssync.createWriteStream(imagePath)
+      );
+
+      await new Promise((resolve, reject) => {
+        writer.on("finish", resolve);
+        writer.on("error", reject);
+      });
+
+      const msg = await api.sendMessage(
+        {
+          body,
+          attachment: fssync.createReadStream(imagePath)
+        },
+        event.threadID
+      );
+
+      this.lastOwnerMsgID = msg.messageID;
+
+      try {
+        await fs.unlink(imagePath);
+      } catch (e) {}
     }
+    catch (err) {
+      console.error("Owner Command Error:", err);
 
+      const msg = await api.sendMessage(
+        body,
+        event.threadID
+      );
+
+      this.lastOwnerMsgID = msg.messageID;
+    }
   },
 
   onChat: async function ({ api, event }) {
     if (!event.body) return;
-    const msg = event.body.toLowerCase().trim();
 
-    if (msg === "!owner" || msg === "bayejid admin") {  
-      await this.onStart({ api, event });  
+    const text = event.body.toLowerCase().trim();
+
+    if (
+      text === "!owner" ||
+      text === "owner" ||
+      text === "bayejid admin" ||
+      text === "admin"
+    ) {
+      return this.onStart({ api, event });
     }
   }
 };
