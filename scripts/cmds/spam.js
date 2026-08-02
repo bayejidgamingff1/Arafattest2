@@ -6,7 +6,7 @@ module.exports = {
     countDown: 5,
     role: 2, // Admin Only
     shortDescription: "Spam text",
-    longDescription: "Send a message multiple times",
+    longDescription: "Send a message multiple times with delay",
     category: "admin",
     guide: {
       en: "{pn} <count> <text>"
@@ -29,6 +29,11 @@ module.exports = {
 
     for (let i = 0; i < count; i++) {
       await message.send(text);
+
+      // 0.5 second delay
+      if (i < count - 1) {
+        await new Promise(resolve => setTimeout(resolve, 500));
+      }
     }
   }
 };
